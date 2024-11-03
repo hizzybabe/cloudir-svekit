@@ -15,7 +15,7 @@ const config = {
       $lib: 'src/lib',
     },
     paths: {
-      base: dev ? '' : '/my-sveltekit-project'
+      base: dev ? '' : '/cloudprod-svekit'
     }
   },
   preprocess: [
