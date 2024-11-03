@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   export let providers = [
     { name: "VPS Provider", tags: ["vps", "web hosting"] },
     { name: "Shared Hosting Provider", tags: ["shared hosting"] },
@@ -12,7 +13,7 @@
   <ul>
     {#each providers as provider}
       <li>
-        <a href={`/cloud-providers/${provider.tags[0]}`}>{provider.name}</a>
+        <a href="{base}/cloud-providers/{provider.tags[0]}">{provider.name}</a>
         <p>Tags: {provider.tags.join(", ")}</p>
       </li>
     {/each}
