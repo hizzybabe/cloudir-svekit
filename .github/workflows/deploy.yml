@@ -27,6 +27,7 @@ jobs:
       - name: Build website
         run: |
           npm run build
+          ls -la build/
           touch build/.nojekyll
         
       - name: Deploy to GitHub Pages
