@@ -8,6 +8,22 @@
   ];
 </script>
 
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  li {
+    border-left: 4px solid var(--secondary-color);
+  }
+
+  h1 {
+    text-align: center;
+  }
+</style>
+
 <main>
   <h1>Web Development Tools Directory</h1>
   <ul>
