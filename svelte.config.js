@@ -1,11 +1,14 @@
 import { sveltekit } from '@sveltejs/kit/vite';
+import adapter from '@sveltejs/adapter-static';
 
 const config = {
   kit: {
-    // Specify the adapter for deployment (e.g., static, node, etc.)
-    adapter: null, // Change this to your desired adapter
+    adapter: adapter({
+      pages: 'build',
+      assets: 'build',
+      fallback: null
+    }),
     alias: {
-      // You can set up path aliases here if needed
       $components: 'src/components',
       $lib: 'src/lib',
     }
