@@ -1,17 +1,20 @@
 {
   "name": "cloudprod-svekit",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
-    "dev": "vite",
+    "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "npm run build && npx gh-pages -d build"
   },
   "devDependencies": {
+    "@sveltejs/adapter-static": "latest",
     "@sveltejs/kit": "latest",
     "svelte": "latest",
     "vite": "latest"
   },
   "dependencies": {
-  }
+  },
+  "type": "module"
 }
