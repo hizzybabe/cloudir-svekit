@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   export let tools = [
     { name: "IDE", tags: ["ide"] },
     { name: "AI Tool", tags: ["ai"] },
@@ -29,7 +30,7 @@
   <ul>
     {#each tools as tool}
       <li>
-        <a href={`/webdev-tools/${tool.name}`}>{tool.name}</a>
+        <a href="{base}/webdev-tools/{tool.name}">{tool.name}</a>
         <p>Tags: {tool.tags.join(", ")}</p>
       </li>
     {/each}
