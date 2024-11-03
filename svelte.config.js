@@ -8,7 +8,7 @@ const config = {
     adapter: adapter({
       pages: 'build',
       assets: 'build',
-      fallback: null,
+      fallback: 'index.html',
       precompress: false,
       strict: true
     }),
@@ -19,7 +19,10 @@ const config = {
     paths: {
       base: dev ? '' : '/cloudprod-svekit'
     },
-    appDir: 'app'
+    appDir: 'app',
+    prerender: {
+      entries: ['*']
+    }
   }
 };
 

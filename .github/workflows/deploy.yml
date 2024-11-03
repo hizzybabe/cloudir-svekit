@@ -27,8 +27,9 @@ jobs:
       - name: Build website
         run: |
           npm run build
-          ls -la build/
           touch build/.nojekyll
+          ls -la build/
+          tree build/
         
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
