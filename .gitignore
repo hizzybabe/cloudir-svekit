@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Build output
+.build/
+dist/
+
+# Local environment variables
+.env
+
+# Logs
+*.log
+
+# SvelteKit specific
+/.svelte-kit/
