@@ -21,6 +21,14 @@ const config = {
     },
     appDir: 'app',
     prerender: {
+      handleHttpError: ({ path, referrer, message }) => {
+        // Ignore missing favicon
+        if (path === '/cloudprod-svekit/favicon.png') {
+          return;
+        }
+        // otherwise fail the build
+        throw new Error(message);
+      },
       entries: ['*']
     }
   }
