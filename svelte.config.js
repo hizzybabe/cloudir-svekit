@@ -1,14 +1,14 @@
-import { sveltekit } from '@sveltejs/kit/vite';
 import adapter from '@sveltejs/adapter-static';
 
 const dev = process.env.NODE_ENV === 'development';
 
+/** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
     adapter: adapter({
       pages: 'build',
       assets: 'build',
-      fallback: null
+      fallback: 'index.html'
     }),
     alias: {
       $components: 'src/components',
@@ -16,11 +16,9 @@ const config = {
     },
     paths: {
       base: dev ? '' : '/cloudprod-svekit'
-    }
-  },
-  preprocess: [
-    // Add any preprocessors here (e.g., SASS, TypeScript, etc.)
-  ]
+    },
+    appDir: 'app'
+  }
 };
 
 export default config;
