@@ -29,8 +29,7 @@ const config = {
         // otherwise fail the build
         throw new Error(message);
       },
-      entries: ['*'],
-      default: true
+      entries: ['*']
     }
   }
 };
