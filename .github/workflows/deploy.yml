@@ -4,6 +4,11 @@ on:
   push:
     branches: ['main']
 
+# Add these permission settings
+permissions:
+  contents: write
+  pages: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
