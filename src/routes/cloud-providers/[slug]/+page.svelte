@@ -26,7 +26,7 @@
         }
       ]
     },
-    // ... (other providers)
+    // Copy the other providers from +page.svelte
   ];
   
   $: provider = providers.find(p => p.slug === data.slug);
