@@ -1,6 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 
 const dev = process.env.NODE_ENV === 'development';
+const base = dev ? '' : '/cloudprod-svekit';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -8,7 +9,7 @@ const config = {
     adapter: adapter({
       pages: 'build',
       assets: 'build',
-      fallback: 'index.html',
+      fallback: '404.html',
       precompress: false,
       strict: true
     }),
@@ -17,7 +18,7 @@ const config = {
       $lib: 'src/lib',
     },
     paths: {
-      base: dev ? '' : '/cloudprod-svekit'
+      base: base
     },
     appDir: 'app',
     prerender: {
